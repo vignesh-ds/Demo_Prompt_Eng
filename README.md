@@ -29,70 +29,29 @@ This guide provides a step-by-step approach to setting up and running **Mistral 
 
 ---
 
-## **📌 Installation & Setup**
-
-### **1️⃣ Install Ollama**
-1. Download Ollama from 👉 [https://ollama.ai](https://ollama.ai)
-2. Run the installer and complete the installation.
-3. Restart your computer after installation.
-4. Verify the installation by running:
-   ```bash
-   ollama --version
-   ```
-
-### **2️⃣ Download AI Models**
-To use Mistral or LLaMA 2 models, download them via Ollama:
-```bash
-ollama pull mistral
-ollama pull llama2
-ollama run mistral
-```
-
-### **3️⃣ Install Python and Ollama Library**
-If Python is not installed, download it from [python.org](https://www.python.org/). Then, install the necessary packages:
-```bash
-pip install ollama
-```
-
-### **4️⃣ Install Jupyter Notebook**
-```bash
-pip install jupyter
-```
-Then start Jupyter:
-```bash
-jupyter notebook
-```
-
-### **5️⃣ Load and Run the Notebook**
-1. Open **Demo_Mistral.ipynb** in Jupyter Notebook.
-2. Execute the cells step by step.
+## **📌 Prerequisites**
+Ensure you have the following installed:
+✅ **Python 3.7+** ([Download Python](https://www.python.org/))  
+✅ **Jupyter Notebook** (`pip install jupyter`)  
+✅ **Ollama Installed** ([Download Here](https://ollama.ai))  
+✅ **Basic knowledge of Python and command-line execution**  
 
 ---
 
-## **📌 Code Walkthrough**
+## **📌 Running the Notebook**
 
-### **🔹 Step 1: Import Libraries**
-```python
-import ollama
-```
+1. Open a terminal and activate your Python environment.
+2. Install necessary dependencies:
+   ```bash
+   pip install ollama jupyter
+   ```
+3. Start Jupyter Notebook:
+   ```bash
+   jupyter notebook
+   ```
+4. Open **Demo_Mistral.ipynb** and execute the cells.
 
-### **🔹 Step 2: Load and Use Mistral AI Model**
-```python
-def ask_mistral(prompt):
-    response = ollama.chat("mistral", messages=[{"role": "user", "content": prompt}])
-    return response["message"]["content"]
-
-response = ask_mistral("Explain quantum computing in simple terms.")
-print(response)
-```
-
-### **🔹 Step 3: Custom Prompt Engineering**
-Modify the prompt dynamically to get refined responses:
-```python
-prompt = "Summarize the impact of AI in healthcare."
-response = ask_mistral(prompt)
-print(response)
-```
+---
 
 ## **📌 Prompt Engineering Techniques**
 
@@ -113,17 +72,6 @@ print(response)
 | **Deliberation-Based Prompting** | AI considers multiple answers before finalizing one | `"What are three career paths in AI, and which is best for future growth?"` |
 | **Tree of Thoughts (ToT)** | AI generates multiple ideas and selects the best | `"Suggest 3 ways to reduce traffic and pick the most effective one."` |
 | **Reflexion Prompting** | AI critiques and refines its response | `"Explain why the sky is blue, then check and refine your answer."` |
-
----
-
-### **📌 Task-Specific Prompting**  
-| Technique | Description | Example |
-|-----------|------------|---------|
-| **Role-Based Prompting** | Assigning AI a specific role | `"You are a doctor. Explain diabetes to a 10-year-old."` |
-| **Persona-Based Prompting** | AI mimics a specific style | `"Explain gravity in Shakespearean style."` |
-| **Prompt Chaining** | Breaking a task into steps | `"Step 1: Write a problem statement. Step 2: Suggest a solution."` |
-| **Progressive-Hint Prompting** | AI refines responses over multiple steps | `"Step 1: What is AI? Step 2: How does it work?"` |
-| **Instruction-Based Prompting** | Structuring responses with step-by-step instructions | `"Write a 100-word summary with an introduction, body, and conclusion."` |
 
 ---
 
@@ -160,6 +108,14 @@ Running the notebook should generate:
 ✅ AI-generated **text responses** from Mistral  
 ✅ **Refined outputs** using prompt engineering  
 ✅ **Comparisons** between different prompt techniques  
+
+---
+
+## **📌 Next Steps**
+🚀 **Want to take this further?**  
+1️⃣ **Expand prompts to test different response styles**  
+2️⃣ **Compare results with other models (Gemma, GPT-4, Claude)**  
+3️⃣ **Build an interactive UI using Streamlit or Gradio**  
 
 ---
 
