@@ -97,7 +97,6 @@ Ensure you have the following installed:
 ### **📌 Advanced Prompting Techniques**  
 | Technique | Description | Example |
 |-----------|------------|---------|
-| **Retrieval-Augmented Generation (RAG)** | AI fetches real-world data before responding | `"Summarize today's latest AI news."` |
 | **Program-Aided Language Model (PAL)** | AI integrates external tools like Python & SQL | `"Write Python code to calculate the average of these numbers: 10, 20, 30."` |
 | **Adaptive Response** | AI adjusts its answer based on user feedback | `"Explain AI to a 10-year-old." → `"Now explain it like I'm an engineer."` |
 
